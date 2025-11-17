@@ -34,9 +34,9 @@ export default function CrystalDisplay({ isExpanded, onToggleExpand, onOpen, dia
   const diamondVariant = currentIndex < 2 ? 1 : 2 // First 2 slides use variant 1, last 2 use variant 2
 
   return (
-    <div className="px-4 py-6">
+    <div className="px-4 py-2">
       {/* Crystal Container */}
-      <div className="relative flex items-center justify-center my-8">
+      <div className="relative flex items-center justify-center my-4">
         {/* Left Arrow */}
         <button
           onClick={handlePrev}
@@ -46,7 +46,7 @@ export default function CrystalDisplay({ isExpanded, onToggleExpand, onOpen, dia
         </button>
 
         {/* Crystal Display */}
-        <div className="relative w-80 h-80 flex items-center justify-center">
+        <div className="relative w-64 h-64 flex items-center justify-center">
           {/* Glow Effect */}
           <div 
             className="absolute inset-0 rounded-full blur-3xl opacity-60"
@@ -58,7 +58,7 @@ export default function CrystalDisplay({ isExpanded, onToggleExpand, onOpen, dia
           {/* Single Large Diamond */}
           <div className="relative z-10 crystal-pulse flex items-center justify-center">
             <Diamond 
-              size={200} 
+              size={160} 
               color={currentColor} 
               glow={true} 
               className="drop-shadow-2xl" 
@@ -77,7 +77,7 @@ export default function CrystalDisplay({ isExpanded, onToggleExpand, onOpen, dia
       </div>
 
       {/* What's Inside Section */}
-      <div className="mt-6">
+      <div className="mt-3">
         <button
           onClick={onToggleExpand}
           className="w-full flex items-center justify-between text-white mb-3"

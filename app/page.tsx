@@ -40,7 +40,7 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-black flex flex-col relative overflow-hidden">
+    <main className="h-screen bg-black flex flex-col relative overflow-hidden">
       {/* Cosmic Background */}
       <div className="fixed inset-0 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-900/20 to-black"></div>
@@ -69,7 +69,7 @@ export default function Home() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col min-h-screen">
+      <div className="relative z-10 flex flex-col h-full">
         {/* Top Bar */}
         <TopBar 
           diamonds={diamonds} 
@@ -78,7 +78,7 @@ export default function Home() {
         />
 
         {/* Main Content */}
-        <div className="flex-1 overflow-y-auto pb-20">
+        <div className="flex-1 overflow-y-auto scrollbar-hide" style={{ maxHeight: 'calc(100vh - 140px)' }}>
           {/* Wins Section */}
           <WinsSection />
 
